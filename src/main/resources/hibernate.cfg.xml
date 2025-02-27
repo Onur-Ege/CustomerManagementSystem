@@ -1,0 +1,19 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/</property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="com.example.entity.User"/>
+        <mapping class="com.example.entity.Customer"/>
+        <mapping class="com.example.entity.Product"/>
+        <mapping class="com.example.entity.Basket"/>
+        <mapping class="com.example.entity.Cart"/>
+    </session-factory>
+</hibernate-configuration>
